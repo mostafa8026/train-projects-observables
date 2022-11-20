@@ -3,11 +3,11 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'production',
   entry: {
-    bundle: './src/index.ts'
+    bundle: './src/main.ts'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
+    filename: 'main.js',
     clean: true,
     assetModuleFilename: '[name][ext]',
   },
@@ -41,7 +41,7 @@ module.exports = {
     })
   ],
   devServer: {
-    port: '8005',
+    port: '8000',
     open: true,
     liveReload: true,
     static: ['./src', './public']
